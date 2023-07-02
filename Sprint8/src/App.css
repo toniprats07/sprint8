@@ -1,0 +1,377 @@
+*{
+  margin:0;
+  padding:0;
+  background-color: var(--color-bg-);
+}
+
+
+:root{
+  --color-bg-:#0a0b0b;
+  --color-snd-:#151515;
+  --color-text-:#a1a1a1;
+  --props-text-:#f1f1f1;
+  --line-bttm--:#2d62a5;
+  --yllw-galaxy--:yellow;
+}
+
+
+header{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+header img{
+  margin: 30px;
+}
+/* ---------Login---------- */
+
+.login{
+
+  position: absolute;
+  top:10%;
+  left: 90%;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.login:hover, .logout:hover{
+  color: var(--yllw-galaxy--)
+}
+
+.login-box{
+  display: flex;
+}
+
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.panell{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  width: 35%;
+  height: 45%;
+  margin-right: 10px;
+  background-color: var(--color-snd-);
+  padding:20px;
+ 
+}
+.header-login, .header-login img{
+  background-color: transparent;
+  margin: 15px 0px;
+
+}
+
+.close{
+  position: fixed;
+  top:0px;
+  right: 15px;
+  width: 40px;
+  background-color: transparent;
+}
+.close:hover{
+  transform: scale(1.2);
+}
+
+.text-login{
+  color: var(--yllw-galaxy--);
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+
+.panell input{
+  width: 85%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--props-text-);
+  font-size: 1.1em;
+  padding: 10px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.panell input:focus{
+  background-color: rgb(61, 62, 54);
+  color:var(--yllw-galaxy--);
+}
+
+.panell button{
+  width: 85%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-text-);
+  color:var(--props-text-);
+  font-size: 1.1em;
+  padding: 10px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.panell button:hover{
+  background-color: var(--line-bttm--);
+  color:var(--props-text-);
+}
+
+
+/* -----------Nav------------- */
+
+.nav-container{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link{
+display: flex;
+justify-content: center;
+margin-top: 10px;
+margin-bottom: 5px;
+width: 96%;
+border-bottom: 2px solid var(--color-snd-);
+border-top: 2px solid var(--color-snd-);
+padding: 10px 20px
+}
+
+a{
+  font-family:'Jura', sans-serif; ;
+  text-decoration: none;
+  color: var(--props-text-);
+  background-color: var(--color-bg-);
+  font-size: 1.2em;
+  border: 2px solid var(--color-snd-);
+  padding: 10px 20px;
+  transition: 0.4s;
+}
+
+.actived,
+a:hover {
+  border-bottom: 2px solid var(--line-bttm--);
+}
+
+/* ------Home--------- */
+
+.home-conatiner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.home-text{
+  width: 50%;
+  color: var(--color-text-);
+  background-color: var(--color-bg-);
+  padding: 30px 20px 60px 20px;
+  font-size: 1.2em;
+}
+
+.btn-home{
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-right: 50px;
+  transition: 1s ease;
+  border: 2px dotted var(--props-text-);
+}
+
+.btn-home:hover{
+  background-image: url("./images/background-icon.jpg");
+  border: 2px dotted var(--props-text-);
+  font-size: 1.8em;
+}
+
+.btn-home .icono {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  left: -40px;
+  transition: .8s ease-in-out all;
+  background-color: transparent;
+}
+
+.btn-home:hover .icono {
+  left: 325px
+}
+
+.btn-home .icono svg {
+  transform: rotate(90deg);
+  color: var(--yllw-galaxy--);
+  background-color: transparent;
+}
+
+
+/* ---------Error----------- */
+
+.error{
+  display: flex;
+  justify-content: center;
+}
+.error img{
+  background-size: cover;
+}
+
+
+/* -----------Starships---------- */
+
+.llista{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.spinner{
+  margin-top: 20px;
+}
+.nau{
+  width: 70%;
+  color: var(--color-text-);
+  background-color: var(--color-snd-);
+  padding: 10px 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+h2,p{
+  background-color: var(--color-snd-);
+  font-family: 'Jura', sans-serif;
+}
+
+h2{
+  margin-bottom: 10px;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+button{
+  padding: 5px 20px;
+  background-color: var(--color-bg-);
+  border: 2px solid yellow;
+  color: var(--props-text-);
+  font-size: 1.2em;
+  border-radius: 15px;
+  margin-top: 10px;
+  transition: .3s;
+}
+
+button:hover{
+  background-color: var(--color-text-);
+  color: var(--color-bg-);
+}
+
+main{
+  margin-bottom: 20px;
+}
+
+/* --------Fitxa Nau----------- */
+
+.container{
+  width: 60%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('./images/background.jpg');
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.container img{
+  width: 80%;
+  border-bottom: 2px solid var(--line-bttm--);
+}
+
+.container h1{
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+.info{
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+  background-color: transparent;
+}
+
+.info2{
+  width: 100%;
+  display: flex;
+  margin: 2em;
+  background-color: transparent;
+}
+
+.info2 div{
+  width: 100%;
+  background-color: transparent;
+}
+
+.dates{
+  background-color:transparent;
+  font-weight: bold;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+span{
+  color:var(--color-text-);
+  background-color: transparent;
+  margin-left: 10px;
+}
+
+/* --------Footer-Fitxa-------- */
+
+.footer-container{
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  background-color: transparent;
+}
+
+/* -------Pilots--------- */
+
+.pilots-starships, .films-starships{
+  display: flex;
+  width: 50%;
+  background-color: transparent;
+}
+
+.pilots{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
+  padding-bottom: 10px;
+}
+
+.pilots img{
+  width: 70px;
+  height: 70px;
+  margin: 0px 5px;
+  border: none;
+  border-radius: 20%;
+}
+
+.no-pilots{
+  background-color: transparent;
+  padding-left: 30px;
+}
+
+/* -------Films-------- */
+
+.films{
+  display: flex;
+  width: 25%;
+  background-color: transparent;
+  padding-bottom: 10px;
+}
+
+.films img{
+  width: 100%;
+  margin:0px 5px;
+  border: none;
+  border-radius: 10px;
+}
